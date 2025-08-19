@@ -212,6 +212,34 @@ section {
     transform: scale(1.05)
 }
 
+ .portfolio-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .portfolio-item img {
+    transition: transform 0.4s ease;
+  }
+
+  .portfolio-item:hover img {
+    transform: scale(1.05); /* Zoom-in */
+  }
+
+  .portfolio-item:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Glow */
+  }
+
+  .portfolio-item h5, 
+  .portfolio-item p {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .portfolio-item:hover h5, 
+  .portfolio-item:hover p {
+    opacity: 1;
+    transform: translateY(-3px); /* Text moves slightly up */
+  }
+
 /* Contact */
 #contact {
     background: var(--ink);
@@ -298,3 +326,4 @@ footer {
 }
 
   
+
